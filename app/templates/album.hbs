@@ -1,0 +1,36 @@
+<div class="header-container">
+  <div class="col-1">
+    <img src={{model.image}}>
+  </div>
+  <div class="col-2">
+    <div class="playlist">TRACKS</div>
+    <div class="playlist-title">{{model.name}}</div>
+    <div class="playlist-desc">{{model.artist}}</div>
+    <div class="action-buttons">
+      <button class="play-btn btn btn-small">PLAY</button>
+      <button class="follow-btn btn btn-small">FOLLOW</button>
+      <button class="more-btn btn"></button>
+    </div>
+  </div>
+  <div class="col-3">
+    <div class="stats">
+      <div>FOLLOWERS</div>
+      <div>172,229</div>
+    </div>
+  </div>
+</div>
+<div class="header-bar">
+  <div class="container">
+    <div class="pull-left">
+      <span>Created by: <a href>Santiago</a></span>
+      <span> - </span>
+      <span>34 songs</span><span>, </span>
+      <span>1 hr 28 min</span>
+    </div>
+  </div>
+</div>
+<div class="playlist-list">
+ {{#each model.tracks as |track|}}
+   	 {{a-track album=model track=track}}
+ {{/each}}
+</div>
