@@ -16,6 +16,15 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
+       contentSecurityPolicy: {
+        'connect-src': "'self' http://localhost:* https://api.spotify.com",
+        'font-src': "'self' data: cdn.auth0.com",
+        'frame-src': "'self'",
+        'img-src': "'self' https://*.gravatar.com",
+        'object-src': "'self'",
+        'script-src': "'self' 'unsafe-eval' 'unsafe-inline' https://api.spotify.com",
+        'style-src': "'self' 'unsafe-inline'"
+      },
     }
   };
 

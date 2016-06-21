@@ -29,8 +29,4 @@
     </div>
   </div>
 </div>
-<div class="playlist-list">
- {{#each model.tracks as |track|}}
-   	 {{a-track album=model track=track}}
- {{/each}}
-</div>
+{{spotify-playlist tracks=model.tracks}}
