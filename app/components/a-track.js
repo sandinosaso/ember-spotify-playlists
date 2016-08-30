@@ -8,5 +8,4 @@ export default Ember.Component.extend({
 	click() {
 	    this.get('player').play(this.get('track.title'), this.get('track.sourceUrl'));
 	}
-
 });
